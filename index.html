@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz Adventure</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="main-bg">
+  <div class="overlay">
+    <div class="main-container">
+      <h1 style="margin-bottom: 30px;">Welcome to the Quiz Adventure!</h1>
+      <button id="startButton" style="padding: 20px 40px; font-size: 20px; margin-bottom: 30px; ">Start Quiz</button>
+      <div class="age-buttons hidden">
+        <h2>Select Your Age Group</h2>
+        <button onclick="startQuiz('under10')">Under 10</button>
+        <button onclick="startQuiz('10to19')">10–19</button>
+        <button onclick="startQuiz('20to29')">20–29</button>
+        <button onclick="startQuiz('30plus')">30+</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.getElementById("startButton").onclick = function() {
+      document.querySelector(".age-buttons").classList.remove("hidden");
+      this.classList.add("hidden");
+    };
+
+    function startQuiz(age) {
+      localStorage.setItem("ageGroup", age);
+      window.location.href = "quiz.html";
+    }
+  </script>
+</body>
+</html>
