@@ -1,0 +1,128 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body, html { font-family: 'Segoe UI', sans-serif; }
+
+.main-bg {
+  background: url('https://t3.ftcdn.net/jpg/00/86/56/12/360_F_86561234_8HJdzg2iBlPap18K38mbyetKfdw1oNrm.jpg') center/cover no-repeat;
+  min-height: 100vh;
+}
+.quiz-body {
+  background: url('https://t3.ftcdn.net/jpg/00/86/56/12/360_F_86561234_8HJdzg2iBlPap18K38mbyetKfdw1oNrm.jpg') center/cover no-repeat;
+  min-height: 100vh;
+}
+
+.overlay {
+  backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.3);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.main-container, .quiz-container {
+  background: rgba(255, 255, 255, 0.92);
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  text-align: center;
+}
+.answer-message {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.age-buttons button {
+  padding: 1rem 2rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  background: #111827;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.age-buttons button:hover {
+  background: #5777be;
+}
+#startButton {
+  border-radius: 12px;
+  cursor: pointer;
+  background: 0.3s ease;
+}
+#startButton:hover {
+  background: #2a3856;
+  color: white;
+}
+
+#questionBox h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.option {
+  margin: 0.5rem 0;
+  padding: 0.75rem;
+  border-radius: 8px;
+  background: #f8fafc;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: 0.2s;
+  #questionBox {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  #resultBox h3 {
+    margin-bottom: 1rem;  /* adds space between score and message */
+    font-size: 1.5rem;
+  }
+  #resultBox p {
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+  }
+  
+}
+.option:hover {
+  background-color: #e0f2fe;
+}
+.option.correct { background: #aef7d1 !important; }
+.option.wrong { background: #faa5a5 !important; }
+
+.nav-buttons button {
+  padding: 0.75rem 1.5rem;
+  background: #111827;         /* same as Start button */
+  color: white;
+  border: none;
+  border-radius: 8px;          /* slightly rounded */
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.nav-buttons button:hover {
+  background-color: #2563eb;   /* hover effect like Start button */
+}
+
+.hidden { display: none; }
+
+@media (max-width: 768px) {
+  .quiz-container {
+    background: rgba(255, 255, 255, 0.92);
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 700px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* slightly darker */
+    border: 1px solid #ccc; /* subtle border */
+    text-align: center;
+  }
+    .age-buttons button { width: 100%; }
+}
+@media (max-width: 768px) {
+  .quiz-container { padding: 1rem; }
+  .age-buttons button { width: 100%; }
+}
